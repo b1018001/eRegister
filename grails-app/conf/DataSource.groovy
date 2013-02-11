@@ -1,9 +1,13 @@
-dataSource {
-    pooled = true
-    driverClassName = "org.h2.Driver"
-    username = "sa"
-    password = ""
-}
+        dataSource {
+            dbCreate = "update"
+            driverClassName = "com.mysql.jdbc.Driver"
+            dialect=org.hibernate.dialect.MySQL5Dialect
+            username = "webarch"
+            password = "webarch"
+            url = "jdbc:mysql://localhost/eregister?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8"
+            pooled = true
+        }
+
 hibernate {
     cache.use_second_level_cache = true
     cache.use_query_cache = false
