@@ -6,3 +6,20 @@ I am attempting to develop an electronic attendance register that I am developin
 Installer instructions with no preconditions
 
 Special aspects I want to stand out
+
+Here's git checkout
+
+Here's how you run the app
+
+DB setup?
+
+about 40 lines
+
+from perspective of potential job
+
+how check into class etc..
+
+how you interact etc..
+
+restful service..
+
