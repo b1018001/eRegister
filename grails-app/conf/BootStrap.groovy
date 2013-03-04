@@ -1,4 +1,4 @@
-import uk.ac.shu.webarch.eRegister.*;
+import uk.ac.shu.webarch.eregister.*;
 
 class BootStrap {
 
