@@ -32,11 +32,40 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${instructorInstance?.staffNumber}">
+				<g:if test="${instructorInstance?.staffId}">
 				<li class="fieldcontain">
-					<span id="staffNumber-label" class="property-label"><g:message code="instructor.staffNumber.label" default="Staff Number" /></span>
+					<span id="staffId-label" class="property-label"><g:message code="instructor.staffId.label" default="Staff Id" /></span>
 					
-						<span class="property-value" aria-labelledby="staffNumber-label"><g:fieldValue bean="${instructorInstance}" field="staffNumber"/></span>
+						<span class="property-value" aria-labelledby="staffId-label"><g:fieldValue bean="${instructorInstance}" field="staffId"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${instructorInstance?.classes}">
+				<li class="fieldcontain">
+					<span id="classes-label" class="property-label"><g:message code="instructor.classes.label" default="Classes" /></span>
+					
+						<g:each in="${instructorInstance.classes}" var="c">
+						<span class="property-value" aria-labelledby="classes-label"><g:link controller="regClass" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${instructorInstance?.regclass}">
+				<li class="fieldcontain">
+					<span id="regclass-label" class="property-label"><g:message code="instructor.regclass.label" default="Regclass" /></span>
+					
+						<span class="property-value" aria-labelledby="regclass-label"><g:fieldValue bean="${instructorInstance}" field="regclass"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${instructorInstance?.salary}">
+				<li class="fieldcontain">
+					<span id="salary-label" class="property-label"><g:message code="instructor.salary.label" default="Salary" /></span>
+					
+						<span class="property-value" aria-labelledby="salary-label"><g:fieldValue bean="${instructorInstance}" field="salary"/></span>
 					
 				</li>
 				</g:if>

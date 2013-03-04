@@ -26,7 +26,11 @@
 					
 						<g:sortableColumn property="name" title="${message(code: 'instructor.name.label', default: 'Name')}" />
 					
-						<g:sortableColumn property="staffNumber" title="${message(code: 'instructor.staffNumber.label', default: 'Staff Number')}" />
+						<g:sortableColumn property="staffId" title="${message(code: 'instructor.staffId.label', default: 'Staff Id')}" />
+					
+						<g:sortableColumn property="regclass" title="${message(code: 'instructor.regclass.label', default: 'Regclass')}" />
+					
+						<g:sortableColumn property="salary" title="${message(code: 'instructor.salary.label', default: 'Salary')}" />
 					
 					</tr>
 				</thead>
@@ -36,7 +40,11 @@
 					
 						<td><g:link action="show" id="${instructorInstance.id}">${fieldValue(bean: instructorInstance, field: "name")}</g:link></td>
 					
-						<td>${fieldValue(bean: instructorInstance, field: "staffNumber")}</td>
+						<td>${fieldValue(bean: instructorInstance, field: "staffId")}</td>
+					
+						<td>${fieldValue(bean: instructorInstance, field: "regclass")}</td>
+					
+						<td>${fieldValue(bean: instructorInstance, field: "salary")}</td>
 					
 					</tr>
 				</g:each>
