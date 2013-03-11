@@ -2,8 +2,9 @@ package uk.ac.shu.webarch.eregister
 
 class Instructor {
 
-	String name
+	
 	String staffId
+	String name
 	Integer salary
 	String regclass
 		
