@@ -2,18 +2,15 @@ package uk.ac.shu.webarch.eregister
 
 class Instructor {
 
-	
 	String staffId
-	String name
-	Integer salary
-	String regclass
+	String instructorName
+	Integer instructorSalary
+	String regClass
 		
 Set classes
 
 static hasMany = [classes: RegClass]   
-
-
-static mappedBy = [classes: 'class_instructor'] 
+static mappedBy = [classes: 'Class_instructor'] 
 
 
  static constraints = {

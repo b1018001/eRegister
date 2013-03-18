@@ -23,6 +23,33 @@
 			</g:if>
 			<ol class="property-list course">
 			
+				<g:if test="${courseInstance?.courseDescription}">
+				<li class="fieldcontain">
+					<span id="courseDescription-label" class="property-label"><g:message code="course.courseDescription.label" default="Course Description" /></span>
+					
+						<span class="property-value" aria-labelledby="courseDescription-label"><g:fieldValue bean="${courseInstance}" field="courseDescription"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${courseInstance?.courseId}">
+				<li class="fieldcontain">
+					<span id="courseId-label" class="property-label"><g:message code="course.courseId.label" default="Course Id" /></span>
+					
+						<span class="property-value" aria-labelledby="courseId-label"><g:fieldValue bean="${courseInstance}" field="courseId"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${courseInstance?.courseName}">
+				<li class="fieldcontain">
+					<span id="courseName-label" class="property-label"><g:message code="course.courseName.label" default="Course Name" /></span>
+					
+						<span class="property-value" aria-labelledby="courseName-label"><g:fieldValue bean="${courseInstance}" field="courseName"/></span>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">

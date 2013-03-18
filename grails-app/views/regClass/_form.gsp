@@ -10,11 +10,11 @@
 	<g:select id="class_instructor" name="class_instructor.id" from="${uk.ac.shu.webarch.eregister.Instructor.list()}" optionKey="id" required="" value="${regClassInstance?.class_instructor?.id}" class="many-to-one"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: regClassInstance, field: 'name', 'error')} ">
-	<label for="name">
-		<g:message code="regClass.name.label" default="Name" />
+<div class="fieldcontain ${hasErrors(bean: regClassInstance, field: 'regClassName', 'error')} ">
+	<label for="regClassName">
+		<g:message code="regClass.regClassName.label" default="Reg Class Name" />
 		
 	</label>
-	<g:textField name="name" value="${regClassInstance?.name}"/>
+	<g:textField name="regClassName" value="${regClassInstance?.regClassName}"/>
 </div>
 

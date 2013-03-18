@@ -23,6 +23,60 @@
 			</g:if>
 			<ol class="property-list regSheet">
 			
+				<g:if test="${regSheetInstance?.instructorId}">
+				<li class="fieldcontain">
+					<span id="instructorId-label" class="property-label"><g:message code="regSheet.instructorId.label" default="Instructor Id" /></span>
+					
+						<span class="property-value" aria-labelledby="instructorId-label"><g:fieldValue bean="${regSheetInstance}" field="instructorId"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${regSheetInstance?.instructorName}">
+				<li class="fieldcontain">
+					<span id="instructorName-label" class="property-label"><g:message code="regSheet.instructorName.label" default="Instructor Name" /></span>
+					
+						<span class="property-value" aria-labelledby="instructorName-label"><g:fieldValue bean="${regSheetInstance}" field="instructorName"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${regSheetInstance?.regSheetId}">
+				<li class="fieldcontain">
+					<span id="regSheetId-label" class="property-label"><g:message code="regSheet.regSheetId.label" default="Reg Sheet Id" /></span>
+					
+						<span class="property-value" aria-labelledby="regSheetId-label"><g:fieldValue bean="${regSheetInstance}" field="regSheetId"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${regSheetInstance?.regSheetName}">
+				<li class="fieldcontain">
+					<span id="regSheetName-label" class="property-label"><g:message code="regSheet.regSheetName.label" default="Reg Sheet Name" /></span>
+					
+						<span class="property-value" aria-labelledby="regSheetName-label"><g:fieldValue bean="${regSheetInstance}" field="regSheetName"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${regSheetInstance?.studentId}">
+				<li class="fieldcontain">
+					<span id="studentId-label" class="property-label"><g:message code="regSheet.studentId.label" default="Student Id" /></span>
+					
+						<span class="property-value" aria-labelledby="studentId-label"><g:fieldValue bean="${regSheetInstance}" field="studentId"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${regSheetInstance?.studentName}">
+				<li class="fieldcontain">
+					<span id="studentName-label" class="property-label"><g:message code="regSheet.studentName.label" default="Student Name" /></span>
+					
+						<span class="property-value" aria-labelledby="studentName-label"><g:fieldValue bean="${regSheetInstance}" field="studentName"/></span>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">

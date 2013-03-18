@@ -32,11 +32,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${regClassInstance?.name}">
+				<g:if test="${regClassInstance?.regClassName}">
 				<li class="fieldcontain">
-					<span id="name-label" class="property-label"><g:message code="regClass.name.label" default="Name" /></span>
+					<span id="regClassName-label" class="property-label"><g:message code="regClass.regClassName.label" default="Reg Class Name" /></span>
 					
-						<span class="property-value" aria-labelledby="name-label"><g:fieldValue bean="${regClassInstance}" field="name"/></span>
+						<span class="property-value" aria-labelledby="regClassName-label"><g:fieldValue bean="${regClassInstance}" field="regClassName"/></span>
 					
 				</li>
 				</g:if>

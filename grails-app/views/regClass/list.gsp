@@ -26,7 +26,7 @@
 					
 						<th><g:message code="regClass.class_instructor.label" default="Classinstructor" /></th>
 					
-						<g:sortableColumn property="name" title="${message(code: 'regClass.name.label', default: 'Name')}" />
+						<g:sortableColumn property="regClassName" title="${message(code: 'regClass.regClassName.label', default: 'Reg Class Name')}" />
 					
 					</tr>
 				</thead>
@@ -36,7 +36,7 @@
 					
 						<td><g:link action="show" id="${regClassInstance.id}">${fieldValue(bean: regClassInstance, field: "class_instructor")}</g:link></td>
 					
-						<td>${fieldValue(bean: regClassInstance, field: "name")}</td>
+						<td>${fieldValue(bean: regClassInstance, field: "regClassName")}</td>
 					
 					</tr>
 				</g:each>
