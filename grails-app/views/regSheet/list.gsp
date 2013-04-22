@@ -24,17 +24,15 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="instructorId" title="${message(code: 'regSheet.instructorId.label', default: 'Instructor Id')}" />
+						<th><g:message code="regSheet.regClass.label" default="Reg Class" /></th>
 					
-						<g:sortableColumn property="instructorName" title="${message(code: 'regSheet.instructorName.label', default: 'Instructor Name')}" />
-					
-						<g:sortableColumn property="regSheetId" title="${message(code: 'regSheet.regSheetId.label', default: 'Reg Sheet Id')}" />
+						<g:sortableColumn property="regSheet" title="${message(code: 'regSheet.regSheet.label', default: 'Reg Sheet')}" />
 					
 						<g:sortableColumn property="regSheetName" title="${message(code: 'regSheet.regSheetName.label', default: 'Reg Sheet Name')}" />
 					
-						<g:sortableColumn property="studentId" title="${message(code: 'regSheet.studentId.label', default: 'Student Id')}" />
+						<th><g:message code="regSheet.student.label" default="Student" /></th>
 					
-						<g:sortableColumn property="studentName" title="${message(code: 'regSheet.studentName.label', default: 'Student Name')}" />
+						<th><g:message code="regSheet.theclass.label" default="Theclass" /></th>
 					
 					</tr>
 				</thead>
@@ -42,17 +40,15 @@
 				<g:each in="${regSheetInstanceList}" status="i" var="regSheetInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${regSheetInstance.id}">${fieldValue(bean: regSheetInstance, field: "instructorId")}</g:link></td>
+						<td><g:link action="show" id="${regSheetInstance.id}">${fieldValue(bean: regSheetInstance, field: "regClass")}</g:link></td>
 					
-						<td>${fieldValue(bean: regSheetInstance, field: "instructorName")}</td>
-					
-						<td>${fieldValue(bean: regSheetInstance, field: "regSheetId")}</td>
+						<td>${fieldValue(bean: regSheetInstance, field: "regSheet")}</td>
 					
 						<td>${fieldValue(bean: regSheetInstance, field: "regSheetName")}</td>
 					
-						<td>${fieldValue(bean: regSheetInstance, field: "studentId")}</td>
+						<td>${fieldValue(bean: regSheetInstance, field: "student")}</td>
 					
-						<td>${fieldValue(bean: regSheetInstance, field: "studentName")}</td>
+						<td>${fieldValue(bean: regSheetInstance, field: "theclass")}</td>
 					
 					</tr>
 				</g:each>

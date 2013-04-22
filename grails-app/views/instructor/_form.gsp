@@ -2,12 +2,12 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: instructorInstance, field: 'name', 'error')} required">
-	<label for="name">
-		<g:message code="instructor.name.label" default="Name" />
+<div class="fieldcontain ${hasErrors(bean: instructorInstance, field: 'instructorName', 'error')} required">
+	<label for="instructorName">
+		<g:message code="instructor.instructorName.label" default="Instructor Name" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="name" required="" value="${instructorInstance?.name}"/>
+	<g:textField name="instructorName" required="" value="${instructorInstance?.instructorName}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: instructorInstance, field: 'staffId', 'error')} required">
@@ -35,19 +35,19 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: instructorInstance, field: 'regclass', 'error')} ">
-	<label for="regclass">
-		<g:message code="instructor.regclass.label" default="Regclass" />
-		
-	</label>
-	<g:textField name="regclass" value="${instructorInstance?.regclass}"/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: instructorInstance, field: 'salary', 'error')} required">
-	<label for="salary">
-		<g:message code="instructor.salary.label" default="Salary" />
+<div class="fieldcontain ${hasErrors(bean: instructorInstance, field: 'instructorSalary', 'error')} required">
+	<label for="instructorSalary">
+		<g:message code="instructor.instructorSalary.label" default="Instructor Salary" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="salary" type="number" value="${instructorInstance.salary}" required=""/>
+	<g:field name="instructorSalary" type="number" value="${instructorInstance.instructorSalary}" required=""/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: instructorInstance, field: 'regClass', 'error')} ">
+	<label for="regClass">
+		<g:message code="instructor.regClass.label" default="Reg Class" />
+		
+	</label>
+	<g:textField name="regClass" value="${instructorInstance?.regClass}"/>
 </div>
 

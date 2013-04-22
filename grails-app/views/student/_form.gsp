@@ -2,6 +2,40 @@
 
 
 
+<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'attendances', 'error')} ">
+	<label for="attendances">
+		<g:message code="student.attendances.label" default="Attendances" />
+		
+	</label>
+	
+<ul class="one-to-many">
+<g:each in="${studentInstance?.attendances?}" var="a">
+    <li><g:link controller="regClass" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></li>
+</g:each>
+<li class="add">
+<g:link controller="regClass" action="create" params="['student.id': studentInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'regClass.label', default: 'RegClass')])}</g:link>
+</li>
+</ul>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'classes', 'error')} ">
+	<label for="classes">
+		<g:message code="student.classes.label" default="Classes" />
+		
+	</label>
+	
+<ul class="one-to-many">
+<g:each in="${studentInstance?.classes?}" var="c">
+    <li><g:link controller="enrollment" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></li>
+</g:each>
+<li class="add">
+<g:link controller="enrollment" action="create" params="['student.id': studentInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'enrollment.label', default: 'Enrollment')])}</g:link>
+</li>
+</ul>
+
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'dateOfBirth', 'error')} ">
 	<label for="dateOfBirth">
 		<g:message code="student.dateOfBirth.label" default="Date Of Birth" />

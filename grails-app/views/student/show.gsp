@@ -23,6 +23,28 @@
 			</g:if>
 			<ol class="property-list student">
 			
+				<g:if test="${studentInstance?.attendances}">
+				<li class="fieldcontain">
+					<span id="attendances-label" class="property-label"><g:message code="student.attendances.label" default="Attendances" /></span>
+					
+						<g:each in="${studentInstance.attendances}" var="a">
+						<span class="property-value" aria-labelledby="attendances-label"><g:link controller="regClass" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${studentInstance?.classes}">
+				<li class="fieldcontain">
+					<span id="classes-label" class="property-label"><g:message code="student.classes.label" default="Classes" /></span>
+					
+						<g:each in="${studentInstance.classes}" var="c">
+						<span class="property-value" aria-labelledby="classes-label"><g:link controller="enrollment" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${studentInstance?.dateOfBirth}">
 				<li class="fieldcontain">
 					<span id="dateOfBirth-label" class="property-label"><g:message code="student.dateOfBirth.label" default="Date Of Birth" /></span>

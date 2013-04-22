@@ -32,11 +32,49 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${regClassInstance?.regClass}">
+				<li class="fieldcontain">
+					<span id="regClass-label" class="property-label"><g:message code="regClass.regClass.label" default="Reg Class" /></span>
+					
+						<span class="property-value" aria-labelledby="regClass-label"><g:fieldValue bean="${regClassInstance}" field="regClass"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${regClassInstance?.regClassName}">
 				<li class="fieldcontain">
 					<span id="regClassName-label" class="property-label"><g:message code="regClass.regClassName.label" default="Reg Class Name" /></span>
 					
 						<span class="property-value" aria-labelledby="regClassName-label"><g:fieldValue bean="${regClassInstance}" field="regClassName"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${regClassInstance?.regSheet}">
+				<li class="fieldcontain">
+					<span id="regSheet-label" class="property-label"><g:message code="regClass.regSheet.label" default="Reg Sheet" /></span>
+					
+						<span class="property-value" aria-labelledby="regSheet-label"><g:fieldValue bean="${regClassInstance}" field="regSheet"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${regClassInstance?.sheets}">
+				<li class="fieldcontain">
+					<span id="sheets-label" class="property-label"><g:message code="regClass.sheets.label" default="Sheets" /></span>
+					
+						<g:each in="${regClassInstance.sheets}" var="s">
+						<span class="property-value" aria-labelledby="sheets-label"><g:link controller="regSheet" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${regClassInstance?.student}">
+				<li class="fieldcontain">
+					<span id="student-label" class="property-label"><g:message code="regClass.student.label" default="Student" /></span>
+					
+						<span class="property-value" aria-labelledby="student-label"><g:link controller="student" action="show" id="${regClassInstance?.student?.id}">${regClassInstance?.student?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

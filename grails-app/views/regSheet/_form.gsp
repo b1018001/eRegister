@@ -2,28 +2,20 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: regSheetInstance, field: 'instructorId', 'error')} ">
-	<label for="instructorId">
-		<g:message code="regSheet.instructorId.label" default="Instructor Id" />
-		
+<div class="fieldcontain ${hasErrors(bean: regSheetInstance, field: 'regClass', 'error')} required">
+	<label for="regClass">
+		<g:message code="regSheet.regClass.label" default="Reg Class" />
+		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="instructorId" value="${regSheetInstance?.instructorId}"/>
+	<g:select id="regClass" name="regClass.id" from="${uk.ac.shu.webarch.eregister.RegClass.list()}" optionKey="id" required="" value="${regSheetInstance?.regClass?.id}" class="many-to-one"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: regSheetInstance, field: 'instructorName', 'error')} ">
-	<label for="instructorName">
-		<g:message code="regSheet.instructorName.label" default="Instructor Name" />
+<div class="fieldcontain ${hasErrors(bean: regSheetInstance, field: 'regSheet', 'error')} ">
+	<label for="regSheet">
+		<g:message code="regSheet.regSheet.label" default="Reg Sheet" />
 		
 	</label>
-	<g:textField name="instructorName" value="${regSheetInstance?.instructorName}"/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: regSheetInstance, field: 'regSheetId', 'error')} ">
-	<label for="regSheetId">
-		<g:message code="regSheet.regSheetId.label" default="Reg Sheet Id" />
-		
-	</label>
-	<g:textField name="regSheetId" value="${regSheetInstance?.regSheetId}"/>
+	<g:textField name="regSheet" value="${regSheetInstance?.regSheet}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: regSheetInstance, field: 'regSheetName', 'error')} ">
@@ -34,19 +26,19 @@
 	<g:textField name="regSheetName" value="${regSheetInstance?.regSheetName}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: regSheetInstance, field: 'studentId', 'error')} ">
-	<label for="studentId">
-		<g:message code="regSheet.studentId.label" default="Student Id" />
-		
+<div class="fieldcontain ${hasErrors(bean: regSheetInstance, field: 'student', 'error')} required">
+	<label for="student">
+		<g:message code="regSheet.student.label" default="Student" />
+		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="studentId" value="${regSheetInstance?.studentId}"/>
+	<g:select id="student" name="student.id" from="${uk.ac.shu.webarch.eregister.Student.list()}" optionKey="id" required="" value="${regSheetInstance?.student?.id}" class="many-to-one"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: regSheetInstance, field: 'studentName', 'error')} ">
-	<label for="studentName">
-		<g:message code="regSheet.studentName.label" default="Student Name" />
-		
+<div class="fieldcontain ${hasErrors(bean: regSheetInstance, field: 'theclass', 'error')} required">
+	<label for="theclass">
+		<g:message code="regSheet.theclass.label" default="Theclass" />
+		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="studentName" value="${regSheetInstance?.studentName}"/>
+	<g:select id="theclass" name="theclass.id" from="${uk.ac.shu.webarch.eregister.TheClass.list()}" optionKey="id" required="" value="${regSheetInstance?.theclass?.id}" class="many-to-one"/>
 </div>
 

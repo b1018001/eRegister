@@ -4,12 +4,9 @@ class RegSheet {
 
 	String regSheet
 	String regSheetName
-	String studentId
-	String studentName
-	String instructorId
 	RegClass regClass
-
-
+        Student student
+	TheClass theclass
 
 
     static constraints = {

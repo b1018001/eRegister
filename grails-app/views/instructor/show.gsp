@@ -23,11 +23,11 @@
 			</g:if>
 			<ol class="property-list instructor">
 			
-				<g:if test="${instructorInstance?.name}">
+				<g:if test="${instructorInstance?.instructorName}">
 				<li class="fieldcontain">
-					<span id="name-label" class="property-label"><g:message code="instructor.name.label" default="Name" /></span>
+					<span id="instructorName-label" class="property-label"><g:message code="instructor.instructorName.label" default="Instructor Name" /></span>
 					
-						<span class="property-value" aria-labelledby="name-label"><g:fieldValue bean="${instructorInstance}" field="name"/></span>
+						<span class="property-value" aria-labelledby="instructorName-label"><g:fieldValue bean="${instructorInstance}" field="instructorName"/></span>
 					
 				</li>
 				</g:if>
@@ -52,20 +52,20 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${instructorInstance?.regclass}">
+				<g:if test="${instructorInstance?.instructorSalary}">
 				<li class="fieldcontain">
-					<span id="regclass-label" class="property-label"><g:message code="instructor.regclass.label" default="Regclass" /></span>
+					<span id="instructorSalary-label" class="property-label"><g:message code="instructor.instructorSalary.label" default="Instructor Salary" /></span>
 					
-						<span class="property-value" aria-labelledby="regclass-label"><g:fieldValue bean="${instructorInstance}" field="regclass"/></span>
+						<span class="property-value" aria-labelledby="instructorSalary-label"><g:fieldValue bean="${instructorInstance}" field="instructorSalary"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${instructorInstance?.salary}">
+				<g:if test="${instructorInstance?.regClass}">
 				<li class="fieldcontain">
-					<span id="salary-label" class="property-label"><g:message code="instructor.salary.label" default="Salary" /></span>
+					<span id="regClass-label" class="property-label"><g:message code="instructor.regClass.label" default="Reg Class" /></span>
 					
-						<span class="property-value" aria-labelledby="salary-label"><g:fieldValue bean="${instructorInstance}" field="salary"/></span>
+						<span class="property-value" aria-labelledby="regClass-label"><g:fieldValue bean="${instructorInstance}" field="regClass"/></span>
 					
 				</li>
 				</g:if>

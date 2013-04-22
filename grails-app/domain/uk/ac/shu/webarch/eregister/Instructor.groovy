@@ -10,11 +10,11 @@ class Instructor {
 Set classes
 
 static hasMany = [classes: RegClass]   
-static mappedBy = [classes: 'Class_instructor'] 
+static mappedBy = [classes: 'class_instructor'] 
 
 
  static constraints = {
-	name(nullable:false, blank:false, maxsize:256);
+	instructorName(nullable:false, blank:false, maxsize:256);
 	staffId(nullable:false, blank:false, maxsize:20)
     }
 }

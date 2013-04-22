@@ -4,15 +4,23 @@ class RegClass {
 
 	String regClass
 	String regClassName
-	String studentId
+	Student student
 	String regSheet
-	Set classes
+	
+	
+Set sheets
 
-static hasMany = [classes: RegSheet]   
-static mappedBy = [classes: 'regSheet']
+static hasMany = [sheets: RegSheet]   
+static mappedBy = [sheets: 'regClass']
 
 Instructor class_instructor
  
     static constraints = {
     }
+
+
+static mapping = {
+class_instructor column: 'instructor_fk'
+course column:'course_fk'
+}
 }

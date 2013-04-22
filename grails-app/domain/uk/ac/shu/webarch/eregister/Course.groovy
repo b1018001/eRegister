@@ -9,5 +9,15 @@ class Course {
 
 
     static constraints = {
+	courseCode maxSize: 20
     }
+static hasMany = [classes: TheClass]
+static mappedBy = [classes: 'course']
+
+static mapping = {
+courseCode column: 'course_name'
+courseName column: 'mapped_course_code'
+courseDescription column: 'course_desc', type:'text'
+
+}
 }
