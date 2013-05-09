@@ -14,7 +14,9 @@ static hasMany = [sheets: RegSheet]
 static mappedBy = [sheets: 'regClass']
 
 Instructor class_instructor
+Course course
  
+
     static constraints = {
     }
 

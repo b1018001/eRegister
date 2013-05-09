@@ -5,13 +5,14 @@ class Course {
 	String courseCode
 	String courseName	
 	String courseDescription
+	
 
 
 
     static constraints = {
 	courseCode maxSize: 20
     }
-static hasMany = [classes: TheClass]
+static hasMany = [classes: RegClass]
 static mappedBy = [classes: 'course']
 
 static mapping = {

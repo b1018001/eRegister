@@ -10,7 +10,15 @@ class BootStrap {
 
 	def web_arch_course = Course.findByCourseCode('646345a') ?: new Course(CourseCode:'646345a',
 									courseName:'Web Architechtures',
-									courseDescription: 'A module teaching about web architechtures').save();
+									courseDescription: 'A module teaching about  webarchitechtures').save();
+	
+	def info_systems_course = Course.findByCourseCode('646345c') ?: new Course(CourseCode:'646345c',
+									courseName:'Information Systems',
+									courseDescription: 'A module teaching about data modelling').save();
+
+
+
+ 
 
 
     }
